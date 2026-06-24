@@ -1,0 +1,291 @@
+/* -------------------------------------------------------------------------- */
+/*                                   GLOBAL                                   */
+/* -------------------------------------------------------------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                      fondo claro background: #d1ffbc
+                          color letras oscuras: #033902
+                       background-color oscuro: rgb(132, 161, 111)                      */
+/* -------------------------------------------------------------------------- */
+
+body {
+  font-family: "Old Standard TT", sans-serif;
+  font-size: 1.6rem;
+  background: rgb(132, 161, 111);
+  color: #033902;
+
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+main {
+  background-color: #d1ffbc;
+  padding-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+}
+
+.main-landing,
+.web-content,
+.landing-contacto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0% 12%;
+}
+
+footer {
+  width: 70%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  flex: 0;
+}
+
+header,
+footer {
+  background-color: rgb(132, 161, 111);
+  color: #e3ffd6;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.div-logo a img {
+  width: 7rem;
+  padding: 0.5rem;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                    MAIN                                    */
+/* -------------------------------------------------------------------------- */
+
+.landing {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contenedor-tarjetas {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.header-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.logo,
+.header-nav ul li a {
+  text-decoration: none;
+  font-size: 2.5rem;
+  color: inherit;
+  display: inline-block;
+  padding: 2rem;
+}
+
+h1 {
+  font-size: 5rem;
+  font-weight: bolder;
+  line-height: 1.15;
+  margin: 3rem 0;
+  padding-top: 2.5rem;
+}
+
+h2 {
+  font-size: 2.4rem;
+  font-weight: 600;
+  line-height: 1.2;
+  text-align: center;
+  margin: 3rem 0;
+}
+
+.card {
+  margin: 1.5rem;
+  padding: 2rem;
+  background: rgb(132, 161, 111);
+  color: #033902;
+  width: 25rem;
+
+  border-radius: 3rem;
+  padding-bottom: 2rem;
+  overflow: hidden;
+
+  display: flex;
+  flex-flow: wrap column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.card img {
+  width: 100%;
+  height: 30rem;
+  object-fit: cover;
+  border-radius: 1.5rem;
+}
+
+.btn {
+  border-radius: 3rem;
+  display: inline-block;
+  cursor: pointer;
+  font-family: Arial;
+  font-size: 1.6rem;
+  padding: 1.6rem 3rem;
+  text-decoration: none;
+}
+
+.btn-green {
+  background-color: #44c767;
+  border: 1px solid #18ab29;
+  color: #ffffff;
+  text-shadow: 0px 1px 0px #2f6627;
+}
+
+.btn-danger {
+  background-color: #c74444;
+  border: 1px solid #ab1818;
+  color: #ffffff;
+  text-shadow: 0px 1px 0px #662727;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                   FOOTER                                   */
+/* -------------------------------------------------------------------------- */
+
+.footer-nav ul {
+  list-style: none;
+  display: flex;
+  padding: 1rem 0.5rem;
+}
+
+.footer-nav nav li a img {
+  width: 4rem;
+  gap: 1rem;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                CONTACT PAGE                                */
+/* -------------------------------------------------------------------------- */
+
+.landing-contacto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2 rem;
+}
+
+.form-consulta {
+  display: flex;
+  flex-direction: column;
+  padding: 5rem 3rem;
+
+  align-items: center;
+  min-width: 30rem;
+  max-width: 30rem;
+  background: rgb(132, 161, 111);
+  color: #033902;
+  border-radius: 5rem;
+}
+
+.form-inputs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 1rem;
+  font-weight: bolder;
+  gap: 0.5rem;
+}
+
+.form-inputs input,
+.form-inputs textarea {
+  border: none;
+  background-color: #e7ffdb;
+  border-bottom: solid 2px •#2a1e35;
+  margin-bottom: 3rem;
+  border-radius: 0.5rem;
+}
+
+.form-inputs input {
+  min-height: 2rem;
+}
+
+.form-inputs textarea {
+  min-height: 4rem;
+  resize: vertical;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                MEDIA QUERIES                               */
+/* -------------------------------------------------------------------------- */
+
+@media (max-width: 600px) {
+  header,
+  footer {
+    flex-direction: column;
+    padding-top: 2.5rem;
+  }
+
+  .main-landing,
+  .web-content .landing-contacto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0% 10%;
+  }
+
+  .landing-contacto {
+    display: flex;
+    margin: 0% 20%;
+    padding-bottom: 9rem;
+  }
+
+  .card {
+    margin: 1.5rem;
+    padding: 2rem;
+    background: rgb(132, 161, 111);
+    color: #033902;
+    width: 20rem;
+
+    border-radius: 3rem;
+    padding-bottom: 2rem;
+    overflow: hidden;
+
+    display: flex;
+    flex-flow: wrap column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .card img {
+    width: 100%;
+    height: 15rem;
+    object-fit: cover;
+    border-radius: 1.5rem;
+  }
+
+  .btn {
+    border-radius: 1.5rem;
+    display: inline-block;
+    cursor: pointer; <<<<--------changed this----->
+    font-family: Arial;
+    font-size: 1.6rem;
+    padding: 1.6rem 3rem;
+    text-decoration: none;
+  }
+}

@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/styles.css" />
+  </head>
+
+  <body>
+    <header>
+      <div class="div-logo">
+        <a class="logo" href="../index.html">
+          <img src="../img/logo.png" alt="logo del mercado un pescadito" />
+        </a>
+      </div>
+      <nav class="header-nav">
+        <ul>
+          <li>
+            <a href="../index.html">Inicio</a>
+          </li>
+          <li>
+            <a href="./contacto.html">Contacto</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="landing-contacto">
+        <h1>Dejanos tu consulta</h1>
+
+        <form
+          action="https://formspree.io/f/xbdwyryr"
+          method="POST"
+          class="form-consulta"
+        >
+          <div class="form-inputs">
+            <label for="email">Tu e-mail:</label>
+            <input id="email" type="email" name="email" />
+
+            <label for="mensaje">Tu mensaje:</label>
+            <textarea id="mensaje" name="message"></textarea>
+          </div>
+          <button class="btn btn-green" type="submit">Enviar</button>
+        </form>
+      </section>
+    </main>
+
+    <footer class="footer-nav">
+      <p>Santiago Rossi - TalentoTech</p>
+      <nav>
+        <ul>
+          <li>
+            <a
+              class="logo"
+              href="https://www.instagram.com/educacionba/"
+              target="_blank"
+            >
+              <img src="../img/ig.png" alt="logo de instagram" />
+            </a>
+          </li>
+          <li>
+            <a
+              class="logo"
+              href="https://api.whatsapp.com/send?phone=541150500147&text=¡Hola%2C%20Boti!%20Quiero%20chatear%20con%20vos.%20😊"
+              target="_blank"
+            >
+              <img src="../img/wpp.png" alt="logo de whatsapp"
+            /></a>
+          </li>
+        </ul>
+      </nav>
+    </footer>
+  </body>
+</html>
