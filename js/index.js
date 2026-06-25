@@ -1,38 +1,43 @@
 import { agregarAlCarrito } from "./funcionescarrito.js";
-import { productos } from "./productos.js";
 import { obtenerCarrito } from "./storage.js";
 import { actualizarContador } from "./ui.js";
 
 const renderizarProductos = () => {
   const contenedor = document.getElementById("contenedor-tarjetas");
-  productos.forEach((producto) => {
-    const tarjeta = document.createElement("article");
-    tarjeta.classList.add("card");
 
-    const img = document.createElement("img");
-    img.src = `./${producto.img}`;
-    img.alt = producto.nombre;
+  fetch("./data/productos.json")
+    .then((response) => response.json())
+    .then((data) =>
+      data.forEach((producto) => {
+        const tarjeta = document.createElement("article");
+        tarjeta.classList.add("card");
 
-    const titulo = document.createElement("h3");
-    titulo.textContent = producto.nombre;
+        const img = document.createElement("img");
+        img.src = `./${producto.img}`;
+        img.alt = producto.nombre;
 
-    const precio = document.createElement("p");
-    precio.textContent = `$${producto.precio}`;
+        const titulo = document.createElement("h3");
+        titulo.textContent = producto.nombre;
 
-    const boton = document.createElement("button");
-    boton.classList.add("btn", "btn-green");
-    boton.textContent = "Agregar al carrito";
-    boton.addEventListener("click", () => {
-      agregarAlCarrito(producto);
-    });
+        const precio = document.createElement("p");
+        precio.textContent = `$${producto.precio}`;
 
-    tarjeta.appendChild(img);
-    tarjeta.appendChild(titulo);
-    tarjeta.appendChild(precio);
-    tarjeta.appendChild(boton);
+        const boton = document.createElement("button");
+        boton.classList.add("btn", "btn-green");
+        boton.textContent = "Agregar al carrito";
+        boton.addEventListener("click", () => {
+          agregarAlCarrito(producto);
+        });
 
-    contenedor.appendChild(tarjeta);
-  });
+        tarjeta.appendChild(img);
+        tarjeta.appendChild(titulo);
+        tarjeta.appendChild(precio);
+        tarjeta.appendChild(boton);
+
+        contenedor.appendChild(tarjeta);
+      }),
+    )
+    .catch((error) => console.log(error));
 };
 
 document.addEventListener("DOMContentLoaded", () => {
