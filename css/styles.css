@@ -282,7 +282,7 @@ h2 {
   .btn {
     border-radius: 1.5rem;
     display: inline-block;
-    cursor: pointer; <<<<--------changed this----->
+    cursor: pointer; /* changed this */
     font-family: Arial;
     font-size: 1.6rem;
     padding: 1.6rem 3rem;
