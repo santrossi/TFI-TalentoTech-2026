@@ -1,4 +1,4 @@
-import { eliminarProducto, vaciarCarrito } from "./funcionescarrito.js";
+import { eliminarProducto, vaciarCarrito } from "./funcionesCarrito.js";
 import { obtenerCarrito } from "./storage.js";
 import { actualizarContador } from "./ui.js";
 
